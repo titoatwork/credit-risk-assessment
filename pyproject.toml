@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "credit-risk-assessment"
+version = "1.0.0"
+description = "Credit risk assessment API: Logistic Regression + XGBoost + SHAP explanations"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "scikit-learn>=1.3.0",
+  "xgboost>=2.0.0",
+  "shap>=0.44.0",
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.27.0",
+  "pydantic>=2.0.0",
+  "pydantic-settings>=2.0.0",
+  "joblib>=1.3.0",
+  "httpx>=0.27.0",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+credit-risk-train = "credit_risk.train:main"
+credit-risk-api = "credit_risk.api:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

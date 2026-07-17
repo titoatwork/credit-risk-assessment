@@ -1,0 +1,51 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Tests / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Model binaries (large; retrain with scripts/run_academic_lifecycle.py)
+*.joblib
+models/**/*.joblib
+
+# Keep metrics and docs under models/
+!models/**/*.json
+!models/**/*.md
+!models/**/README.md
+
+# Local / OS
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Data dumps (dataset lives outside repo)
+data/raw/
+*.csv
+!data/sample_payloads.json

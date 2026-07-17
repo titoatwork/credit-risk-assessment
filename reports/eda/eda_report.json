@@ -1,0 +1,371 @@
+{
+  "stage": "1_exploratory_data_analysis",
+  "n_rows": 307511,
+  "n_columns": 122,
+  "n_features_modeling": 120,
+  "target_column": "TARGET",
+  "class_counts": {
+    "0": 282686,
+    "1": 24825
+  },
+  "default_rate": 0.08072881945686496,
+  "imbalance_ratio_neg_pos": 11.387150050352467,
+  "n_numeric_features": 104,
+  "n_categorical_features": 16,
+  "top_missing_rates": {
+    "COMMONAREA_AVG": 0.6987229725115525,
+    "COMMONAREA_MODE": 0.6987229725115525,
+    "COMMONAREA_MEDI": 0.6987229725115525,
+    "NONLIVINGAPARTMENTS_AVG": 0.6943296337366793,
+    "NONLIVINGAPARTMENTS_MODE": 0.6943296337366793,
+    "NONLIVINGAPARTMENTS_MEDI": 0.6943296337366793,
+    "FONDKAPREMONT_MODE": 0.6838617155158677,
+    "LIVINGAPARTMENTS_AVG": 0.6835495315614726,
+    "LIVINGAPARTMENTS_MEDI": 0.6835495315614726,
+    "LIVINGAPARTMENTS_MODE": 0.6835495315614726,
+    "FLOORSMIN_MODE": 0.6784862980511266,
+    "FLOORSMIN_AVG": 0.6784862980511266,
+    "FLOORSMIN_MEDI": 0.6784862980511266,
+    "YEARS_BUILD_AVG": 0.6649778381911542,
+    "YEARS_BUILD_MODE": 0.6649778381911542,
+    "YEARS_BUILD_MEDI": 0.6649778381911542,
+    "OWN_CAR_AGE": 0.6599081008484249,
+    "LANDAREA_MEDI": 0.5937673774271489,
+    "LANDAREA_AVG": 0.5937673774271489,
+    "LANDAREA_MODE": 0.5937673774271489,
+    "BASEMENTAREA_MODE": 0.5851595552679416,
+    "BASEMENTAREA_MEDI": 0.5851595552679416,
+    "BASEMENTAREA_AVG": 0.5851595552679416,
+    "EXT_SOURCE_1": 0.5638107254699832,
+    "NONLIVINGAREA_MODE": 0.5517916432257708
+  },
+  "numeric_summary_sample": {
+    "CNT_CHILDREN": {
+      "mean": 0.4170517477423572,
+      "std": 0.7221213844376252,
+      "min": 0.0,
+      "max": 19.0
+    },
+    "AMT_INCOME_TOTAL": {
+      "mean": 168797.9192969845,
+      "std": 237123.1462788562,
+      "min": 25650.0,
+      "max": 117000000.0
+    },
+    "AMT_CREDIT": {
+      "mean": 599025.9997057016,
+      "std": 402490.7769958549,
+      "min": 45000.0,
+      "max": 4050000.0
+    },
+    "AMT_ANNUITY": {
+      "mean": 27108.573909183444,
+      "std": 14493.737315118335,
+      "min": 1615.5,
+      "max": 258025.5
+    },
+    "AMT_GOODS_PRICE": {
+      "mean": 538396.2074288895,
+      "std": 369446.46054005757,
+      "min": 40500.0,
+      "max": 4050000.0
+    },
+    "REGION_POPULATION_RELATIVE": {
+      "mean": 0.020868112057780035,
+      "std": 0.013831280122704704,
+      "min": 0.00029,
+      "max": 0.072508
+    },
+    "DAYS_BIRTH": {
+      "mean": -16036.995066843137,
+      "std": 4363.98863178556,
+      "min": -25229.0,
+      "max": -7489.0
+    },
+    "DAYS_EMPLOYED": {
+      "mean": 63815.04590404896,
+      "std": 141275.76651872724,
+      "min": -17912.0,
+      "max": 365243.0
+    },
+    "DAYS_REGISTRATION": {
+      "mean": -4986.120327538418,
+      "std": 3522.8863209630713,
+      "min": -24672.0,
+      "max": 0.0
+    },
+    "DAYS_ID_PUBLISH": {
+      "mean": -2994.2023732484367,
+      "std": 1509.4504190030232,
+      "min": -7197.0,
+      "max": 0.0
+    },
+    "OWN_CAR_AGE": {
+      "mean": 12.061090818687727,
+      "std": 11.94481158224276,
+      "min": 0.0,
+      "max": 91.0
+    },
+    "FLAG_MOBIL": {
+      "mean": 0.9999967480838083,
+      "std": 0.001803307015351493,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLAG_EMP_PHONE": {
+      "mean": 0.8198893698111612,
+      "std": 0.3842801989387643,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLAG_WORK_PHONE": {
+      "mean": 0.1993684778755882,
+      "std": 0.3995262281502265,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLAG_CONT_MOBILE": {
+      "mean": 0.9981334001060125,
+      "std": 0.04316389414243239,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLAG_PHONE": {
+      "mean": 0.28106636835755466,
+      "std": 0.44952054685675835,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLAG_EMAIL": {
+      "mean": 0.0567199222141647,
+      "std": 0.23130703972270758,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "CNT_FAM_MEMBERS": {
+      "mean": 2.152665450442101,
+      "std": 0.9106815691792972,
+      "min": 1.0,
+      "max": 20.0
+    },
+    "REGION_RATING_CLIENT": {
+      "mean": 2.0524631639193394,
+      "std": 0.50903390281568,
+      "min": 1.0,
+      "max": 3.0
+    },
+    "REGION_RATING_CLIENT_W_CITY": {
+      "mean": 2.031520823645333,
+      "std": 0.5027370329147687,
+      "min": 1.0,
+      "max": 3.0
+    },
+    "HOUR_APPR_PROCESS_START": {
+      "mean": 12.063418869568894,
+      "std": 3.265832255437871,
+      "min": 0.0,
+      "max": 23.0
+    },
+    "REG_REGION_NOT_LIVE_REGION": {
+      "mean": 0.015144173704355291,
+      "std": 0.12212647628215205,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "REG_REGION_NOT_WORK_REGION": {
+      "mean": 0.05076891558350758,
+      "std": 0.21952582879696064,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "LIVE_REGION_NOT_WORK_REGION": {
+      "mean": 0.04065870814377372,
+      "std": 0.19749861882842365,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "REG_CITY_NOT_LIVE_CITY": {
+      "mean": 0.07817281333025486,
+      "std": 0.26844377237340455,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "REG_CITY_NOT_WORK_CITY": {
+      "mean": 0.23045354475124466,
+      "std": 0.4211238359138973,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "LIVE_CITY_NOT_WORK_CITY": {
+      "mean": 0.17955455252007246,
+      "std": 0.38381661538559586,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "EXT_SOURCE_1": {
+      "mean": 0.5021298056566624,
+      "std": 0.21106224927392495,
+      "min": 0.0145681324124455,
+      "max": 0.962692770561306
+    },
+    "EXT_SOURCE_2": {
+      "mean": 0.5143926741308464,
+      "std": 0.19106015498493653,
+      "min": 8.173616518884397e-08,
+      "max": 0.8549996664047012
+    },
+    "EXT_SOURCE_3": {
+      "mean": 0.5108529061799657,
+      "std": 0.1948443644637488,
+      "min": 0.0005272652387098,
+      "max": 0.8960095494948396
+    },
+    "APARTMENTS_AVG": {
+      "mean": 0.11744049917464508,
+      "std": 0.10824029130032231,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "BASEMENTAREA_AVG": {
+      "mean": 0.08844221905179983,
+      "std": 0.08243815873568511,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "YEARS_BEGINEXPLUATATION_AVG": {
+      "mean": 0.9777348581623325,
+      "std": 0.05922331435836282,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "YEARS_BUILD_AVG": {
+      "mean": 0.7524714325927221,
+      "std": 0.11327992663224716,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "COMMONAREA_AVG": {
+      "mean": 0.044620715411350736,
+      "std": 0.07603574505040936,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "ELEVATORS_AVG": {
+      "mean": 0.07894151232418883,
+      "std": 0.13457600110034418,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "ENTRANCES_AVG": {
+      "mean": 0.1497246700680495,
+      "std": 0.10004912076035907,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLOORSMAX_AVG": {
+      "mean": 0.22628190703665582,
+      "std": 0.144640699548004,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "FLOORSMIN_AVG": {
+      "mean": 0.2318935004905481,
+      "std": 0.1613802888001374,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "LANDAREA_AVG": {
+      "mean": 0.06633318417239695,
+      "std": 0.08118364070179358,
+      "min": 0.0,
+      "max": 1.0
+    }
+  },
+  "categorical_summary_sample": {
+    "NAME_CONTRACT_TYPE": {
+      "n_unique": 2,
+      "top": "Cash loans",
+      "missing_rate": 0.0
+    },
+    "CODE_GENDER": {
+      "n_unique": 3,
+      "top": "F",
+      "missing_rate": 0.0
+    },
+    "FLAG_OWN_CAR": {
+      "n_unique": 2,
+      "top": "N",
+      "missing_rate": 0.0
+    },
+    "FLAG_OWN_REALTY": {
+      "n_unique": 2,
+      "top": "Y",
+      "missing_rate": 0.0
+    },
+    "NAME_TYPE_SUITE": {
+      "n_unique": 7,
+      "top": "Unaccompanied",
+      "missing_rate": 0.004201475719567756
+    },
+    "NAME_INCOME_TYPE": {
+      "n_unique": 8,
+      "top": "Working",
+      "missing_rate": 0.0
+    },
+    "NAME_EDUCATION_TYPE": {
+      "n_unique": 5,
+      "top": "Secondary / secondary special",
+      "missing_rate": 0.0
+    },
+    "NAME_FAMILY_STATUS": {
+      "n_unique": 6,
+      "top": "Married",
+      "missing_rate": 0.0
+    },
+    "NAME_HOUSING_TYPE": {
+      "n_unique": 6,
+      "top": "House / apartment",
+      "missing_rate": 0.0
+    },
+    "OCCUPATION_TYPE": {
+      "n_unique": 18,
+      "top": "Laborers",
+      "missing_rate": 0.31345545362604915
+    },
+    "WEEKDAY_APPR_PROCESS_START": {
+      "n_unique": 7,
+      "top": "TUESDAY",
+      "missing_rate": 0.0
+    },
+    "ORGANIZATION_TYPE": {
+      "n_unique": 58,
+      "top": "Business Entity Type 3",
+      "missing_rate": 0.0
+    },
+    "FONDKAPREMONT_MODE": {
+      "n_unique": 4,
+      "top": "reg oper account",
+      "missing_rate": 0.6838617155158677
+    },
+    "HOUSETYPE_MODE": {
+      "n_unique": 3,
+      "top": "block of flats",
+      "missing_rate": 0.50176091261776
+    },
+    "WALLSMATERIAL_MODE": {
+      "n_unique": 7,
+      "top": "Panel",
+      "missing_rate": 0.508407829313423
+    },
+    "EMERGENCYSTATE_MODE": {
+      "n_unique": 2,
+      "top": "No",
+      "missing_rate": 0.47398304450897694
+    }
+  },
+  "academic_notes": [
+    "Class imbalance (~8% positives) implies accuracy is a poor primary metric.",
+    "Missing values are common in Home Credit; imputation is required before modeling.",
+    "Categorical fields require encoding (one-hot) with handle_unknown for serve-time safety."
+  ]
+}
