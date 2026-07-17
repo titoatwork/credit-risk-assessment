@@ -23,12 +23,14 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from credit_risk.config import (  # noqa: E402
-    ARTIFACTS_PATH,
-    METRICS_PATH,
-    MODELS_DIR,
-    PROJECT_STATUS,
-)
+from credit_risk.config import ARTIFACTS_PATH, METRICS_PATH, MODELS_DIR  # noqa: E402
+try:
+    from credit_risk.config import PROJECT_STATUS  # noqa: E402
+except ImportError:  # older installs / stale process
+    PROJECT_STATUS = {
+        "lifecycle": "academic_v2_train_val_test",
+        "primary_model_pack": "models/full_data",
+    }
 from credit_risk.explain import explain_decline  # noqa: E402
 from credit_risk.predict import (  # noqa: E402
     assess_applicant,
@@ -794,7 +796,7 @@ payment difficulties (default risk) using Home Credit–style application featur
 |-------|----------------|
 | Models | Logistic Regression + XGBoost |
 | Preprocessing | Median/mode impute, scaling (LR), one-hot encoding |
-| Decision | Decline if \(P(\\text{default}) \\ge \\tau\) |
+| Decision | Decline if P(default) >= threshold |
 | Explainability | SHAP local feature contributions |
 | API | FastAPI (`credit_risk.api`) |
 | This UI | Streamlit dashboard |
