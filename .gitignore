@@ -39,6 +39,8 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+.github_pat
+*.pat
 
 # IDE
 .idea/
