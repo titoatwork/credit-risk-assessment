@@ -166,7 +166,8 @@ Tuning docs: [`docs/HYPERPARAMETER_TUNING.md`](docs/HYPERPARAMETER_TUNING.md) â€
 
 ## 10. Presentation
 
-Use [`docs/PRESENTATION_GUIDE.md`](docs/PRESENTATION_GUIDE.md).
+- **Word-for-word 5-min script:** [`docs/PRESENTATION_SCRIPT_5MIN.md`](docs/PRESENTATION_SCRIPT_5MIN.md)
+- Demo checklist / Q&A: [`docs/PRESENTATION_GUIDE.md`](docs/PRESENTATION_GUIDE.md)
 
 **One-liner for faculty:**
 
